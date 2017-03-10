@@ -25,6 +25,10 @@ var app = angular.module('app', ['ngRoute', 'ngCookies', 'ngAnimate', 'ngSanitiz
                 templateUrl: 'html/config.html',
                 controller: 'ConfigController'
             })
+            .when('/login', {
+                templateUrl: 'html/login.html',
+                controller: 'LoginController'
+            })
             .when('/apis', {
                 templateUrl: 'html/apis/index.html',
                 controller: 'ApisController',
