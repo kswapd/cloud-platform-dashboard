@@ -21,6 +21,27 @@ var app = angular.module('app', ['ngRoute', 'ngCookies', 'ngAnimate', 'ngSanitiz
                     isAppReady: isAppReady
                 }
             })
+            .when('/first_page', {
+                templateUrl: 'html/first_page.html',
+                controller: 'HomeController',
+                resolve: {
+                    isAppReady: isAppReady
+                }
+            })
+            .when('/my_app', {
+                templateUrl: 'html/my_app.html',
+                controller: 'HomeController',
+                resolve: {
+                    isAppReady: isAppReady
+                }
+            })
+            .when('/cloud_service', {
+                templateUrl: 'html/cloud_service.html',
+                controller: 'HomeController',
+                resolve: {
+                    isAppReady: isAppReady
+                }
+            })
             .when('/config', {
                 templateUrl: 'html/config.html',
                 controller: 'ConfigController'

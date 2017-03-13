@@ -15,11 +15,13 @@ h1, h2, h3, h4, h5, h6 {
     font-weight:300;
 }
 
-.left_color, .mtopdown{
-    background-color: #546e7a;
+
+/*img.top {
+vertical-align:text-top;
+}*/
+.logo-image{
+    display:inline;
 }
-
-
 .header {
     font-weight: 300;
     margin-top:50px;
@@ -29,10 +31,12 @@ h1, h2, h3, h4, h5, h6 {
 .mtopdown {
     position: fixed !important;
     margin-top:50px;
-    /*background-color: #9e9e9e;
-    background-color: $primary-color;*/
+
+    background-color: $primary-color;
     width:150px;
-    height:calc(100% - 100px);
+    height:100%;
+    /*height:calc(100% - 80px);
+    background-color: #ef9a9a;*/
 }
 
 
@@ -44,13 +48,15 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-
+.btn_space{
+    margin: 0px 5px 0px 5px;
+}
 footer {
     position: fixed !important;
     bottom:0;
     width:100%;
-    height:50px;
-    background-color: $primary-color;
+    height:30px;
+    /*background-color: $primary-color;*/
 }
 
 

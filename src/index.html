@@ -16,7 +16,17 @@
 
 
     <nav class="top_nav fade ng-hide-animate " ng-show="app.config.showOther" set-class-when-at-top="fix-to-top">
+        
+        <div class="col s12 left">
+            <div class="logo-image">
+              <img src="images/logo.png">
+            </div>
+            
+        </div>
         <ul class="right hide-on-med-and-down">
+            
+
+
             <li>
                 <a href="#/">
                     <i class="material-icons">home</i>
@@ -126,11 +136,13 @@
 
 
 <ul id="nav-mobile" class="side-nav fixed mtopdown" ng-show="app.config.showOther">
+
+<!--
         <li ><a href="about.html" class="waves-effect waves-teal">首页</a></li>
-        <li ><a href="getting-started.html" class="waves-effect waves-teal">我的应用</a></li>
+        
         <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
-            <li><a class="collapsible-header  waves-effect waves-teal">云中台服务</a>
+            <li><a class="collapsible-header  waves-effect waves-teal">服务</a>
               <div class="collapsible-body">
                 <ul>
                   <li class="left_color"><a href="color.html">舆情服务</a></li>
@@ -142,9 +154,15 @@
             
           </ul>
         </li>
-        <li class="bold"><a href="http://materializecss.com/mobile.html" class="waves-effect waves-teal">应用统计</a></li>
-        <li class="bold"><a href="showcase.html" class="waves-effect waves-teal">服务统计</a></li>
-        <li class="bold"><a href="themes.html" class="waves-effect waves-teal">设置</a></li>
+
+        <li ><a href="getting-started.html" class="waves-effect waves-teal">我的应用</a></li>
+
+    -->
+
+        <li ><a href="#/first_page" class="waves-effect waves-teal">首页</a></li>
+        <li ><a href="#/cloud_service" class="waves-effect waves-teal">云服务市场</a></li>
+        <li ><a href="#/my_app" class="waves-effect waves-teal">我的应用</a></li>
+
       </ul>
 
 
@@ -161,7 +179,8 @@
 
 
     <footer class="fade ng-hide-animate" ng-show="app.config.showOther">
-        <div class="container">
+  
+            <!--
             <p class="grey-text text-lighten-4 right">
                 Current kong node:
                 <em>
@@ -169,7 +188,17 @@
                     (<a class="white-text" href="#/config" style="text-decoration:underline">Edit</a>)
                 </em>
             </p>
-        </div>
+            <p class="grey-text text-lighten-4 right">
+            -->
+            <div class="row right">
+                Copyright © 2017-2020 海航科技物流集团技术研究院
+                <!--
+                <em>
+                    {{app.config.url}}
+                    (<a class="white-text" href="#/config" style="text-decoration:underline">Edit</a>)
+                </em>
+                -->
+            </div>
     </footer>
     <!--Import jQuery before materialize.js
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
