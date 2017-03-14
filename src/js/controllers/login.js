@@ -11,17 +11,19 @@ angular.module('app').controller("LoginController", ["$scope", "Kong", "Alert", 
             $scope.config.url = "http://" + $scope.config.url;
         }
 
-        Kong.setConfig($scope.config).then(function() {
+        Alert.success('Saved!');
+        $location.path('/');
+        /*Kong.setConfig($scope.config).then(function() {
             $scope.config.showOther = true;
-            /*if (first_setup) {
+            if (first_setup) {
                 $location.path('/');
                 first_setup = false;
-            } else */
+            } else 
             {
                 // celebrate
                 Alert.success('Saved!');
                 $location.path('/');
             }
-        });
+        });*/
     }
 }]);

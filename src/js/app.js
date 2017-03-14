@@ -7,10 +7,11 @@ var app = angular.module('app', ['ngRoute', 'ngCookies', 'ngAnimate', 'ngSanitiz
             if (appStarted) {
                 return true;
             }
-            if (!Kong.config.url) {
+            return true;
+            /*if (!Kong.config.url) {
                 $location.path('/config');
                 return false;
-            }
+            }*/
         }];
 
         $routeProvider
