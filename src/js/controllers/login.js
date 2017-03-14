@@ -11,7 +11,7 @@ angular.module('app').controller("LoginController", ["$scope", "Kong", "Alert", 
             $scope.config.url = "http://" + $scope.config.url;
         }
 
-        Alert.success('Saved!');
+        //Alert.success('Saved!');
         Kong.config.showOther = true;
         $location.path('/cloud_service');
         console.log($scope.config.showOther);

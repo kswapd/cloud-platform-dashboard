@@ -10,82 +10,53 @@
     <app-route-loading-indicator></app-route-loading-indicator>
 
 
-    <nav class="top_nav fade ng-hide-animate " ng-show="app.config.showOther" set-class-when-at-top="fix-to-top">
+    <nav class="top_nav" ng-show="app.config.showOther" set-class-when-at-top="fix-to-top">
         
+       <!--
         <div class="col s12 left">
             <div class="logo-image">
               <img src="images/logo2.png">
             </div>
             
         </div>
+        -->
+        <a href="#/first_page" class="brand-logo"> 
+            <div class="logo-image">
+              <img src="images/logo2.png">
+            </div>
+            Innovation
+        </a>
         <ul class="right hide-on-med-and-down">
-            
-
 
             <li>
-                <a href="#/">
+                <a href="#/first_page">
                     <i class="material-icons">home</i>
-                    Home
+                    首页
                 </a>
             </li>
             <li>
-                <a href="#/apis">
+                <!--<a href="#/apis">-->
+                    <a href="#/cloud_service">
                     <i class="material-icons">apps</i>
-                    APIs
+                    创新服务
                 </a>
             </li>
+
             <li>
-                <a href="#/consumers">
-                    <i class="material-icons">account_box</i>
-                    Consumers
-                </a>
-            </li>
-            <li>
-                <a href="#/plugins">
+                <a href="#/my_app">
+                <!--<a href="#/plugins">-->
                     <i class="material-icons">extension</i>
-                    Plugins
+                     我的应用
                 </a>
             </li>
             <li>
                 <a href="#/config">
                     <i class="material-icons">settings</i>
-                    Settings
+                    设置
                 </a>
             </li>
         </ul>
-        <ul id="slide-out" class="side-nav">
-            <li>
-                <a href="#/">
-                    <i class="material-icons">home</i>
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="#/apis">
-                    <i class="material-icons">apps</i>
-                    APIs
-                </a>
-            </li>
-            <li>
-                <a href="#/consumers">
-                    <i class="material-icons">account_box</i>
-                    Consumers
-                </a>
-            </li>
-            <li>
-                <a href="#/plugins">
-                    <i class="material-icons">extension</i>
-                    Plugins
-                </a>
-            </li>
-            <li>
-                <a href="#/config">
-                    <i class="material-icons">settings</i>
-                    Settings
-                </a>
-            </li>
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse app-slide-out"><i class="material-icons">menu</i></a>
+        
     </nav>
 
 
@@ -121,14 +92,7 @@
 
 
 
-
-
     <main ng-view ng-show="initialized"></main>
-
-
-
-
-
     <app-loader ng-hide="initialized"></app-loader>
 
     <footer class="fade ng-hide-animate" ng-show="app.config.showOther">
