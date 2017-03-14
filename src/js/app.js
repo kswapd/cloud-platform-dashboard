@@ -226,7 +226,11 @@ var app = angular.module('app', ['ngRoute', 'ngCookies', 'ngAnimate', 'ngSanitiz
             .otherwise({redirectTo: '/'});
     }])
     .run(['$rootScope', 'Kong', '$location', function($rootScope, Kong, $location) {
-        $rootScope.initialized = false;
+        $rootScope.app = Kong;
+        $rootScope.initialized = true;
+        //$location.path("/config");
+    
+        /*$rootScope.initialized = false;
         Kong.checkConfig(Kong.config).then(function() {
             $rootScope.app = Kong;
             $rootScope.initialized = true;
@@ -235,5 +239,6 @@ var app = angular.module('app', ['ngRoute', 'ngCookies', 'ngAnimate', 'ngSanitiz
             $rootScope.app = Kong;
             $rootScope.initialized = true;
             $location.path("/config");
-        })
+        })*/
+    
     }]);

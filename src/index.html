@@ -2,7 +2,7 @@
 <html lang="en" ng-app="app" ng-strict-di>
 <head>
     <meta charset="UTF-8">
-    <title>Kong Dashboard</title>
+    <title>数字创新平台</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/app.min.css" >
 </head>
@@ -10,16 +10,11 @@
     <app-route-loading-indicator></app-route-loading-indicator>
 
 
-
-
-
-
-
     <nav class="top_nav fade ng-hide-animate " ng-show="app.config.showOther" set-class-when-at-top="fix-to-top">
         
         <div class="col s12 left">
             <div class="logo-image">
-              <img src="images/logo.png">
+              <img src="images/logo2.png">
             </div>
             
         </div>
@@ -94,47 +89,6 @@
     </nav>
 
 
-<!--
-    <nav id="slide-out-nav" class="side-nav fixed mtopdown ">
-
-    <ul id="slide-out" class="left">
-        <li><a href="#!">我的接口</a>
-
-            <div class="collapsible-body">
-                <ul>
-                  <li><a href="color.html">Color</a></li>
-                  <li><a href="grid.html">Grid</a></li>
-                  <li><a href="helpers.html">Helpers</a></li>
-                  <li><a href="media-css.html">Media</a></li>
-                  <li><a href="pulse.html">Pulse</a></li>
-                  <li><a href="sass.html">Sass</a></li>
-                  <li><a href="shadow.html">Shadow</a></li>
-                  <li><a href="table.html">Table</a></li>
-                  <li><a href="css-transitions.html">Transitions</a></li>
-                  <li><a href="typography.html">Typography</a></li>
-                </ul>
-              </div>
-
-
-
-
-        </li>
-        <li><a href="#!">所有应用</a></li>
-        <li><a href="#!">应用监控</a></li>
-
-        <li><a href="#!">应用报警</a></li>
-        <li><a href="#!">设置</a></li>
-
-    </ul>
-
-    </nav>
-
--->
-
-
-
-
-
 <ul id="nav-mobile" class="side-nav fixed mtopdown" ng-show="app.config.showOther">
 
 <!--
@@ -170,49 +124,19 @@
 
 
     <main ng-view ng-show="initialized"></main>
+
+
+
+
+
     <app-loader ng-hide="initialized"></app-loader>
 
-
-
-
-
-
-
     <footer class="fade ng-hide-animate" ng-show="app.config.showOther">
-  
-            <!--
-            <p class="grey-text text-lighten-4 right">
-                Current kong node:
-                <em>
-                    {{app.config.url}}
-                    (<a class="white-text" href="#/config" style="text-decoration:underline">Edit</a>)
-                </em>
-            </p>
-            <p class="grey-text text-lighten-4 right">
-            -->
+
             <div class="row right">
                 Copyright © 2017-2020 海航科技物流集团技术研究院
-                <!--
-                <em>
-                    {{app.config.url}}
-                    (<a class="white-text" href="#/config" style="text-decoration:underline">Edit</a>)
-                </em>
-                -->
             </div>
     </footer>
-    <!--Import jQuery before materialize.js
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script>
-      (function($){
-        $(function(){
-
-          $('.button-collapse').sideNav();
-
-        }); // end of document ready
-      })(jQuery); // end of jQuery name space
-    </script>
-    -->
     <script src="js/app.min.js"></script>
 </body>
 </html>

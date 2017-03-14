@@ -8,7 +8,7 @@ body {
 
 main {
     flex: 1 0 auto;
-    margin-left:150px
+    margin:50px 0px 30px 150px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,8 +19,14 @@ h1, h2, h3, h4, h5, h6 {
 /*img.top {
 vertical-align:text-top;
 }*/
-.logo-image{
+.logo-image {
     display:inline;
+}
+.logo-image img{
+    
+    width:50px;
+    height:50px;
+    overflow: hidden;
 }
 .header {
     font-weight: 300;
