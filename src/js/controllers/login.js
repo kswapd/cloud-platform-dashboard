@@ -13,7 +13,7 @@ angular.module('app').controller("LoginController", ["$scope", "Kong", "Alert", 
 
         //Alert.success('Saved!');
         Kong.config.showOther = true;
-        $location.path('#/dashboard');
+        $location.path('#/cloud_service');
         console.log($scope.config.showOther);
         /*Kong.setConfig($scope.config).then(function() {
             $scope.config.showOther = true;

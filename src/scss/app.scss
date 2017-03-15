@@ -6,14 +6,14 @@ body {
     flex-direction: column;
 }
 
-/*
+
 main {
     flex: 1 0 auto;
     margin:50px 0px 30px 150px;
     overflow:hidden;
 }
 
-*/
+
 
 h1, h2, h3, h4, h5, h6 {
     font-weight:300;
@@ -86,15 +86,16 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed !important;
     margin-top:50px;
 
-    background-color: $primary-color;
+
     width:150px;
     height:100%;
-    /*height:calc(100% - 80px);
-    background-color: #ef9a9a;*/
+    /*height:calc(100% - 94px);
+    background-color: #ef9a9a;
+    background-color: $primary-color;*/
 }
 
 
-.top_nav {
+.top-nav {
     position: fixed !important;
     height: 50px;
     margin-top:0px;

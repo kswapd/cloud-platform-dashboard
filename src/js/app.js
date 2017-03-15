@@ -16,14 +16,14 @@ var app = angular.module('app', ['ngRoute', 'ngCookies', 'ngAnimate', 'ngSanitiz
 
         $routeProvider
             .when('/', {
-                templateUrl: 'html/home.html',
+                templateUrl: 'html/cloud_service.html',
                 controller: 'HomeController',
                 resolve: {
                     isAppReady: isAppReady
                 }
             })
             .when('/home', {
-                templateUrl: 'html/home.html',
+                templateUrl: 'html/first_page.html',
                 controller: 'HomeController',
                 resolve: {
                     isAppReady: isAppReady

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-strict-di>
+<head>
+    <meta charset="UTF-8">
+    <title>数字创新平台</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.min.css" >
+</head>
+<body>
+    <app-route-loading-indicator></app-route-loading-indicator>
+
+
+    <nav class="top-nav main-color" ng-show="app.config.showOther" set-class-when-at-top="fix-to-top">
+        
+       <!--
+        <div class="col s12 left">
+            <div class="logo-image">
+              <img src="images/logo2.png">
+            </div>
+            
+        </div>
+        
+        <a href="#/first_page" class="brand-logo"> 
+            <div class="logo-image">
+              <img src="images/logo2.png">
+            </div>
+            Innovation
+        </a>-->
+            <div class="home-logo">
+            <a href="index.html" class="home-logo-a"> 
+                <div class="home-logo-img">
+                  <img src="images/logo4.png">
+                </div>
+                <div class="home-logo-text">
+                    Innovation
+                </div>
+            </a>
+            </div>
+        <ul class="right hide-on-med-and-down">
+
+            <li>
+                <a href="#/first_page">
+                    <i class="material-icons">home</i>
+                    首页
+                </a>
+            </li>
+            <li>
+                <!--<a href="#/apis">-->
+                    <a href="#/cloud_service">
+                    <i class="material-icons">apps</i>
+                    创新服务
+                </a>
+            </li>
+
+            <li>
+                <a href="#/my_app">
+                <!--<a href="#/plugins">-->
+                    <i class="material-icons">extension</i>
+                     我的应用
+                </a>
+            </li>
+            <li>
+                <a href="#/config">
+                    <i class="material-icons">settings</i>
+                    设置
+                </a>
+            </li>
+        </ul>
+        
+    </nav>
+
+
+<ul id="nav-mobile" class="side-nav fixed mtopdown main-color" ng-show="app.config.showOther">
+
+<!--
+        <li ><a href="about.html" class="waves-effect waves-teal">首页</a></li>
+        
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li><a class="collapsible-header  waves-effect waves-teal">服务</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li class="left_color"><a href="color.html">舆情服务</a></li>
+                  <li class="left_color"><a href="grid.html">物联网服务</a></li>
+                  <li class="left_color"><a href="helpers.html">AI服务</a></li>
+                </ul>
+              </div>
+            </li>
+            
+          </ul>
+        </li>
+
+        <li ><a href="getting-started.html" class="waves-effect waves-teal">我的应用</a></li>
+
+    -->
+
+        <li ><a href="#/first_page" class="waves-effect waves-teal">首页</a></li>
+        <li ><a href="#/cloud_service" class="waves-effect waves-teal">云服务市场</a></li>
+        <li ><a href="#/my_app" class="waves-effect waves-teal">我的应用</a></li>
+
+      </ul>
+
+
+
+    <main ng-view ng-show="initialized"></main>
+    <app-loader ng-hide="initialized"></app-loader>
+
+    <footer class="fade ng-hide-animate" ng-show="app.config.showOther">
+
+            <div class="row right">
+                Copyright © 2017-2020 海航科技物流集团技术研究院
+            </div>
+    </footer>
+    <script src="js/app.min.js"></script>
+</body>
+</html>
