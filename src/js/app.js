@@ -22,6 +22,20 @@ var app = angular.module('app', ['ngRoute', 'ngCookies', 'ngAnimate', 'ngSanitiz
                     isAppReady: isAppReady
                 }
             })
+            .when('/home', {
+                templateUrl: 'html/home.html',
+                controller: 'HomeController',
+                resolve: {
+                    isAppReady: isAppReady
+                }
+            })
+            .when('/dashboaard', {
+                templateUrl: 'dashboard.html',
+                /*controller: 'HomeController',
+                resolve: {
+                    isAppReady: isAppReady
+                }*/
+            })
             .when('/first_page', {
                 templateUrl: 'html/first_page.html',
                 controller: 'HomeController',

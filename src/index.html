@@ -1,106 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" ng-app="app" ng-strict-di>
+
 <head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="caas">
+  <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAAA+CAYAAAA/K6W8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkFBQzU2QTFFNzU2RTExRTY4MkM4RjM3Njg0OTg2RDhGIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkFBQzU2QTFGNzU2RTExRTY4MkM4RjM3Njg0OTg2RDhGIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QUFDNTZBMUM3NTZFMTFFNjgyQzhGMzc2ODQ5ODZEOEYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QUFDNTZBMUQ3NTZFMTFFNjgyQzhGMzc2ODQ5ODZEOEYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4+JJcRAAAIkUlEQVR42uyc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" rel="icon" type="image/x-icon" />
     <meta charset="UTF-8">
     <title>数字创新平台</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/app.min.css" >
 </head>
+
 <body>
-    <app-route-loading-indicator></app-route-loading-indicator>
+     
 
-
-    <nav class="top_nav" ng-show="app.config.showOther" set-class-when-at-top="fix-to-top">
-        
-       <!--
-        <div class="col s12 left">
-            <div class="logo-image">
-              <img src="images/logo2.png">
-            </div>
-            
-        </div>
-        -->
-        <a href="#/first_page" class="brand-logo"> 
-            <div class="logo-image">
-              <img src="images/logo2.png">
-            </div>
-            Innovation
-        </a>
-        <ul class="right hide-on-med-and-down">
-
-            <li>
-                <a href="#/first_page">
-                    <i class="material-icons">home</i>
-                    首页
-                </a>
-            </li>
-            <li>
-                <!--<a href="#/apis">-->
-                    <a href="#/cloud_service">
-                    <i class="material-icons">apps</i>
-                    创新服务
-                </a>
-            </li>
-
-            <li>
-                <a href="#/my_app">
-                <!--<a href="#/plugins">-->
-                    <i class="material-icons">extension</i>
-                     我的应用
-                </a>
-            </li>
-            <li>
-                <a href="#/config">
-                    <i class="material-icons">settings</i>
-                    设置
-                </a>
-            </li>
-        </ul>
-        
-    </nav>
-
-
-<ul id="nav-mobile" class="side-nav fixed mtopdown" ng-show="app.config.showOther">
-
-<!--
-        <li ><a href="about.html" class="waves-effect waves-teal">首页</a></li>
-        
-        <li class="no-padding">
-          <ul class="collapsible collapsible-accordion">
-            <li><a class="collapsible-header  waves-effect waves-teal">服务</a>
-              <div class="collapsible-body">
-                <ul>
-                  <li class="left_color"><a href="color.html">舆情服务</a></li>
-                  <li class="left_color"><a href="grid.html">物联网服务</a></li>
-                  <li class="left_color"><a href="helpers.html">AI服务</a></li>
-                </ul>
-              </div>
-            </li>
-            
-          </ul>
-        </li>
-
-        <li ><a href="getting-started.html" class="waves-effect waves-teal">我的应用</a></li>
-
-    -->
-
-        <li ><a href="#/first_page" class="waves-effect waves-teal">首页</a></li>
-        <li ><a href="#/cloud_service" class="waves-effect waves-teal">云服务市场</a></li>
-        <li ><a href="#/my_app" class="waves-effect waves-teal">我的应用</a></li>
-
-      </ul>
-
-
-
-    <main ng-view ng-show="initialized"></main>
-    <app-loader ng-hide="initialized"></app-loader>
-
-    <footer class="fade ng-hide-animate" ng-show="app.config.showOther">
-
-            <div class="row right">
-                Copyright © 2017-2020 海航科技物流集团技术研究院
-            </div>
-    </footer>
-    <script src="js/app.min.js"></script>
+    <ng-view></ng-view>
+<!-- 
+    <main ng-view ></main>
+    <ui-view></ui-view>
+  <div class="build-verstion-tag">buildVersion</div> -->
+<script src="js/app.min.js"></script>
 </body>
 </html>
