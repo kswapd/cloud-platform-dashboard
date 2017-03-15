@@ -9,6 +9,7 @@ angular.module('app').controller("PluginsController", ["pluginsCollection", "$sc
     $scope.owner = $owner;
 
     $scope.plugins = pluginsCollection.data;
+    console.log(pluginsCollection);
     $scope.total = pluginsCollection.total;
     $scope.next = pluginsCollection.next;
     $scope.size = $route.current.params.size;

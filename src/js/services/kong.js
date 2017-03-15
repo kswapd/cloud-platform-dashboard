@@ -93,6 +93,7 @@ angular.module('app')
             factory[method] = function (endpoint) {
                 var deferred = $q.defer();
                 try {
+                    console.log('get req url:'+endpoint+':'+factory.config.url)
                     Request({
                         kong_url: factory.config.url,
                         endpoint: endpoint,

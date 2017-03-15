@@ -31,11 +31,48 @@ var app = angular.module('app', ['ngRoute', 'ngCookies', 'ngAnimate', 'ngSanitiz
             })
             .when('/my_app', {
                 templateUrl: 'html/apps/index.html',
-                controller: 'HomeController',
-                resolve: {
-                    isAppReady: isAppReady
+                controller: 'PluginsController',
+                resolve: { 
+                    isAppReady: isAppReady,
+                    pluginsCollection: ['Kong', '$route', '$location', function (Kong, $route, $location) {
+                        var url = '/ping?';
+                        if ($route.current.params.offset) {
+                           url += 'offset=' + encodeURIComponent($route.current.params.offset);
+                        }
+                        if ($route.current.params.size) {
+                            url += '&size=' + $route.current.params.size;
+                        }
+                        return Kong.get(url);
+                    }],
+                    owner: function() { return {};}
                 }
             })
+
+
+            .when('/plugins', {
+                templateUrl: 'html/plugins/index.html',
+                controller: 'PluginsController',
+                resolve: { 
+                    isAppReady: isAppReady,
+                    pluginsCollection: ['Kong', '$route', '$location', function (Kong, $route, $location) {
+                        var url = '/plugins?';
+                        if ($route.current.params.offset) {
+                           url += 'offset=' + encodeURIComponent($route.current.params.offset);
+                        }
+                        if ($route.current.params.size) {
+                            url += '&size=' + $route.current.params.size;
+                        }
+                        return Kong.get(url);
+                    }],
+                    owner: function() { return {};}
+                }
+            })
+
+
+
+
+
+
             .when('/cloud_service', {
                 templateUrl: 'html/cloud_service.html',
                 controller: 'HomeController',
