@@ -103,6 +103,12 @@ vagrant up
 ```
 
 ## Use
+```
+npm install
+npm start
+//to test browser sync:
+npm sync
+```
 
 You can now browse your kong dashboard at http://localhost:8080
 =======

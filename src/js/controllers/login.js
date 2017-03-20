@@ -4,6 +4,7 @@ angular.module('app').controller("LoginController", ["$scope", "Kong", "Alert", 
     var first_setup = !$scope.config.url;
     Kong.config.showOther = false;
     $scope.update = function() {
+        console.log('ok...');
         if (!$scope.config.url) {
             $scope.config.url = "http://localhost:8001";
         }
@@ -13,7 +14,7 @@ angular.module('app').controller("LoginController", ["$scope", "Kong", "Alert", 
 
         //Alert.success('Saved!');
         Kong.config.showOther = true;
-        $location.path('#/cloud_service');
+        $location.path('h.html#/cloud_service');
         console.log($scope.config.showOther);
         /*Kong.setConfig($scope.config).then(function() {
             $scope.config.showOther = true;

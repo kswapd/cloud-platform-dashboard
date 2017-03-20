@@ -30,7 +30,6 @@
     "node-sass": "^4.1.1",
     "rimraf": "^2.5.4",
     "uglify-js": "^2.7.5"
-
   },
   "bin": {
     "kong-dashboard": "./bin/kong-dashboard.js"
@@ -38,9 +37,11 @@
   "scripts": {
     "install": "node ./bin/kong-dashboard build",
     "start": "node ./bin/kong-dashboard start",
-    "test": "mocha"
+    "test": "mocha",
+    "sync":"node ./app.js"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.8",
     "chai": "^3.5.0",
     "mocha": "^3.2.0"
   }

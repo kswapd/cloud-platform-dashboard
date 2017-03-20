@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html lang="en" ng-app="app" ng-strict-di>
+
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="caas">
+  
+    <meta charset="UTF-8">
+    <title>平台登录</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.min.css" >
+</head>
+
+<body>
+     
+
+
+<div>
+        <div class="main-login">
+            <div class="center-align">登录云中台</div>
+
+                <form ng-submit="update()" name="configForm">
+
+
+
+                    <div class="login-row">
+                            <label for="basic_auth_username" ng-class="{active:config.auth.username}">Username</label>
+                            <input ng-model="config.auth.username" id="basic_auth_username" type="text">
+                            
+                    </div>
+                    <div class="login-row">
+                            <label for="basic_auth_password" ng-class="{active:config.auth.password}">Password</label>
+                            <input ng-model="config.auth.password" id="basic_auth_password" type="password">
+                            
+                    </div>
+                    <div class="center-align">
+                            <button type="submit" class="waves-effect waves-blue btn ">LOGIN</button>
+                    </div>
+                </form>
+
+    </div>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
